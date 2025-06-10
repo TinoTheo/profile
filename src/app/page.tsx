@@ -4,9 +4,8 @@ import Lottie from 'lottie-react';
 import animationData from '../../public/animations/hero-bg.json';
 import Button from './components/ui/button';
 import { FaGithub, FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa';
-import ProjectCard from './components/projects/projectsCard';
-import { projects } from '@/data/projects';
 import FeaturedProjects from './components/sections/FeaturedProjects';
+import ContactSection from './components/sections/ContactSection';
 
 export default function HeroSection() {
   return (
@@ -87,6 +86,7 @@ export default function HeroSection() {
     
     </section>
     <FeaturedProjects />
+    <ContactSection />
  </>
     );
    

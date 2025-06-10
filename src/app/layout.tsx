@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 import Navbar from "./components/sections/navbar";
+import ChatWidget from "./components/sections/chatwidget";
 
 export const metadata: Metadata = {
   title: "Freelancer",
@@ -19,6 +19,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main className="">{children}</main>
+        <ChatWidget />
+
+  
       </body>
     </html>
   );
