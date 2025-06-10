@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getProjectBySlug } from '@/utils/projects';
 import ProjectHeader from '../projectHeader';
+import Link from 'next/link';
 
 export async function generateStaticParams() {
   const projects = await import('@/data/projects').then(mod => mod.projects);
@@ -56,12 +57,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <h3 className="text-lg font-medium text-gray-900">Want to see more?</h3>
               <p className="text-gray-600">Check out my other projects</p>
             </div>
-            <a 
+            <Link 
               href="/#projects" 
               className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
             >
               View All Projects
-            </a>
+            </Link>
           </div>
         </div>
       </div>

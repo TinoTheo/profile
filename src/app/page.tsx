@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white  backdrop-blur-3xl p-8 md:p-12 rounded-2xl shadow-xl ">
           <div className="order-2 lg:order-1 text-center lg:text-left z-10">
             <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent mb-6">
-              Hello World, I'm Theo
+              Hello World, I am Theo
             </h1>
             
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">

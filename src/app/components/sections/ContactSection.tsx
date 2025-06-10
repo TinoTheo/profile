@@ -10,7 +10,7 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <p className="text-xl mb-8">
-                Have a project in mind? Let's collaborate and bring your ideas to life!
+                Have a project in mind? Let us collaborate and bring your ideas to life!
               </p>
               
               <div className="space-y-6">
