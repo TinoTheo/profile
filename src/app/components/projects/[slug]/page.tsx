@@ -3,7 +3,6 @@ import { getProjectBySlug } from '@/utils/projects';
 import ProjectHeader from '../projectHeader';
 import Link from 'next/link';
 
-
 export async function generateStaticParams() {
   const projects = await import('@/data/projects').then(mod => mod.projects);
   return projects.map(project => ({
@@ -11,8 +10,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = await getProjectBySlug(params.slug);
+type Props = {
+  params: { slug: string }
+};
+
+export default function ProjectPage({ params }: Props) {
+  const project = getProjectBySlug(params.slug);
   
   if (!project) {
     return notFound();
