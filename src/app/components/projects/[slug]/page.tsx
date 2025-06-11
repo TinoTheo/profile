@@ -10,11 +10,13 @@ export async function generateStaticParams() {
   }));
 }
 
-type Props = {
-  params: { slug: string }
-};
+interface ProjectPageProps {
+  params: { slug: string };
+}
 
-export default function ProjectPage({ params }: Props) {
+
+export default function ProjectPage({ params }: ProjectPageProps) {
+
   const project = getProjectBySlug(params.slug);
   
   if (!project) {
