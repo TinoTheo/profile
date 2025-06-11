@@ -4,12 +4,7 @@ import ProjectHeader from '../projectHeader';
 import Link from 'next/link';
 
 
-export async function generateStaticParams() {
-  const projects = await import('@/data/projects').then(mod => mod.projects);
-  return projects.map(project => ({
-    slug: project.slug,
-  }));
-}
+export const dynamicParams = true;
 
 interface ProjectPageProps {
   params: { slug: string };
