@@ -20,7 +20,7 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium">Email</h3>
-                    <p>hello@theo.dev</p>
+                    <p>theotmuff@gmail.com</p>
                   </div>
                 </div>
                 
@@ -30,7 +30,7 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium">Phone</h3>
-                    <p>+1 (555) 123-4567</p>
+                    <p>+27 73 145 8566</p>
                   </div>
                 </div>
                 
