@@ -56,13 +56,9 @@ export default function ChatWidget() {
             backgroundColor: '#fff',
           }}
         >
-          <iframe
-            src="https://www.gptbots.ai/widget/eerhwzazdd6m9abewd3bglp/chat.html"
-            width="100%"
-            height="100%"
-            allow="microphone *"
-            style={{ border: 'none' }}
-          ></iframe>
+
+<iframe width="100%" height="100%" allow="microphone *" src="https://www.gptbots.ai/widget/eerhwzazdd6m9abewd3bglp/chat.html"></iframe>
+  
         </div>
       )}
     </>

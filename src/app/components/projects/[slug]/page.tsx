@@ -3,26 +3,23 @@ import { getProjectBySlug } from '@/utils/projects';
 import ProjectHeader from '../projectHeader';
 import Link from 'next/link';
 
-
 export async function generateStaticParams() {
   const mod = await import('@/data/projects');
   const projects = mod.projects;
 
-  const params: { slug: string }[] = projects.map(project => ({
+  return projects.map(project => ({
     slug: project.slug,
   }));
-
-  return params;
 }
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: { slug: string | string[] };
 }
 
-
 export default function ProjectPage({ params }: ProjectPageProps) {
-
-  const project = getProjectBySlug(params.slug);
+  // Normalize slug to string
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const project = getProjectBySlug(slug);
   
   if (!project) {
     return notFound();
