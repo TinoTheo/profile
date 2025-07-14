@@ -9,7 +9,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project, className = '' }: ProjectCardProps) {
   return (
-    <div className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
+    <div className={`bg-[#00052b] border border-gray-500 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
       <div className="relative h-56 overflow-hidden">
         <Image 
           src={project.imageUrl}
@@ -22,14 +22,14 @@ export default function ProjectCard({ project, className = '' }: ProjectCardProp
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-        <p className="text-gray-700 mb-4 line-clamp-2">{project.description}</p>
+        <h3 className="text-xl font-extralight text-white mb-2">{project.title}</h3>
+        <p className="text-white mb-4 line-clamp-2">{project.description}</p>
         
         <div className="flex flex-wrap gap-2 mb-6">
           {project.skills.slice(0, 3).map((skill, index) => (
             <span 
               key={index} 
-              className="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full"
+              className="px-3 py-1 bg-accent-3 text-white border-1 border-gray-500 text-sm font-light rounded-full"
             >
               {skill}
             </span>
@@ -47,7 +47,7 @@ export default function ProjectCard({ project, className = '' }: ProjectCardProp
               href={project.githubUrl} 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition-colors flex items-center gap-1"
+              className="text-gray-600 hover:text-white transition-colors flex items-center gap-1"
               aria-label="GitHub repository"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@ export default function ProjectCard({ project, className = '' }: ProjectCardProp
           
           <Link 
             href={`/projects/${project.slug}`}
-            className="text-indigo-600 hover:text-indigo-800 font-medium transition-colors flex items-center gap-1"
+            className="text-gray-500 hover:text-gray-400 font-medium transition-colors flex items-center gap-1"
           >
             View Details
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">

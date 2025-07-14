@@ -15,7 +15,7 @@ export default function ChatWidget() {
           right: '20px',
           width: '60px',
           height: '60px',
-          backgroundColor: '#0066CC',
+          backgroundColor: '#FFF',
           borderRadius: '50%',
           display: 'flex',
           alignItems: 'center',
@@ -28,7 +28,7 @@ export default function ChatWidget() {
       
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="white"
+          fill="black"
           viewBox="0 0 24 24"
           width="28"
           height="28"

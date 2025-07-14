@@ -9,17 +9,17 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-max">
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-100 w-full max-w-max">
       <div className={`
         flex flex-col md:flex-row rounded-full shadow-lg overflow-hidden
-        border border-gray-300 bg-white backdrop-blur-md bg-opacity-90
-        ${isOpen ? "rounded-b-lg" : "rounded-full"}
+        border border-gray-500 bg-black/50 backdrop-blur-md bg-opacity-90
+        ${isOpen ? "rounded-t-lg" : "rounded-b-lg"}
       `}>
         {/* Top bar - visible on all screens */}
-        <div className="flex md:items-center">
+        <div className="flex md:items-center z-100">
           <Link href="/" onClick={closeMenu}>
-            <div className="px-6 py-3 gap-2 hover:bg-gray-100 md:border-l border-gray-200 text-gray-600 transition flex ">
-              <span className="font-bold">Theo T. M</span>
+            <div className="px-6 py-3 gap-2  md:border-l border-gray-800 text-white transition flex ">
+              <span className="font-bold"> Theo T. M </span>
             </div>
           </Link>
           
@@ -30,11 +30,11 @@ export default function Navbar() {
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-white" fill="#fff" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-white" fill="#fff" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
@@ -67,7 +67,7 @@ export default function Navbar() {
 function NavLink({ href, text }: { href: string; text: string }) {
   return (
     <Link href={href}>
-      <div className="px-6 py-3 hover:bg-gray-100 transition border-l border-gray-200 text-gray-600">
+      <div className="px-6 py-3 transition   text-white">
         {text}
       </div>
     </Link>
@@ -82,7 +82,7 @@ function MobileNavLink({ href, text, onClick }: {
 }) {
   return (
     <Link href={href} onClick={onClick}>
-      <div className="px-6 py-4 hover:bg-gray-100 transition border-t border-gray-200 text-gray-600 text-center">
+      <div className="px-6 py-4 hover:bg-black transition border-t border-gray-200 text-white text-center">
         {text}
       </div>
     </Link>

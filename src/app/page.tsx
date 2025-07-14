@@ -6,30 +6,42 @@ import Button from './components/ui/button';
 import { FaGithub, FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import FeaturedProjects from './components/sections/FeaturedProjects';
 import ContactSection from './components/sections/ContactSection';
+import Services from './components/sections/Services';
 
 export default function HeroSection() {
   return (
     <>
-    <section className="relative min-h-screen flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-center px-4 sm:px-6 py-12 md:py-24 backdrop-blur-2xl overflow-hidden">
-      {/* Background overlay
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-xl z-0"></div> */}
-      <div className="max-w-7xl mx-auto w-fulll">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white  backdrop-blur-3xl p-8 md:p-12 rounded-2xl shadow-xl ">
-          <div className="order-2 lg:order-1 text-center lg:text-left z-10">
-            <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent mb-6">
+   <section className="relative min-h-screen flex items-center justify-center p-12 z-0 bg-[url('/office-01.jpg')] bg-fixed bg-cover md:bg-fixed bg-center">
+   <div className='absolute min-h-screen inset-0 -z-100 '></div>
+    <div className="flex items-center justify-center max-w-7xl mx-auto w-full p-12 z-100">
+      <div className="text-center">
+        <h1 className="text-2xl md:text-7xl  font-bold text-white">Crafting Modern Websites</h1>
+        <h1 className="text-xl md:text-6xl font-bold text-white">That Work for You</h1>
+        <h2 className='text-l md:text-3xl text-white max-w-4xl mx-auto'><span className='text-center'>From landing pages to full-stack platforms — I help businesses go digital with clean, fast, and user-friendly websites.</span></h2>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center text-center">
+          <Button variant="primary" size="md">Get a quote</Button>
+          <Button variant="outline" size="md">Get Expertise</Button>
+          <Button variant="ghost" size="md">Get in touch</Button>
+        </div>
+      </div>
+    </div>
+   </section>
+  <section className="relative min-h-screen flex items-center justify-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center backdrop-blur-lg p-8 md:p-12">
+          <div className="order-2 lg:order-1 text-center lg:text-left">
+            <h1 className="text-4xl md:text-4xl lg:text-4xl font-bold bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent mb-6">
               Hello World, I am Theo
             </h1>
-            
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto lg:mx-0 text-gray-400">
               I craft digital experiences that blend creativity with functionality. 
               As a passionate freelancer, I transform complex problems into intuitive solutions.
             </p>
-            
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="primary" size="md">View My Work</Button>
               <Button variant="outline" size="md">Contact Me</Button>
+              <Button variant="ghost" size="md">Hire Me</Button>
             </div>
-            
             {/* Social Icons */}
             <div className="mt-12 flex justify-center lg:justify-start">
               <div className="flex space-x-6">
@@ -37,7 +49,7 @@ export default function HeroSection() {
                   href="https://github.com/yourprofile" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
+                  className="text-white hover:text-gray-900 transition-colors duration-300"
                   aria-label="GitHub"
                 >
                   <FaGithub className="h-6 w-6" />
@@ -46,14 +58,14 @@ export default function HeroSection() {
                   href="https://instagram.com/yourprofile" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-pink-600 transition-colors duration-300"
+                  className="text-white hover:text-pink-600 transition-colors duration-300"
                   aria-label="Instagram"
                 >
                   <FaInstagram className="h-6 w-6" />
                 </a>
                 <a 
                   href="mailto:your@email.com" 
-                  className="text-gray-600 hover:text-red-600 transition-colors duration-300"
+                  className="text-white hover:text-red-600 transition-colors duration-300"
                   aria-label="Email"
                 >
                   <FaEnvelope className="h-6 w-6" />
@@ -62,12 +74,13 @@ export default function HeroSection() {
                   href="https://facebook.com/yourprofile" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
+                  className="text-white hover:text-gray-500 transition-colors duration-300"
                   aria-label="Facebook"
                 >
                   <FaFacebook className="h-6 w-6" />
                 </a>
               </div>
+              
             </div>
           </div>
           
@@ -82,12 +95,10 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-    
     </section>
+    <Services/>
     <FeaturedProjects />
     <ContactSection />
  </>
     );
-   
 }

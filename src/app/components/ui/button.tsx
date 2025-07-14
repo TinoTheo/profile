@@ -18,10 +18,10 @@ const Button = ({
 }: ButtonProps) => {
     const baseClasses= "font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2";
     const variants = {
-        primary: "bg-gray-600 text-white hover:bg-gray-700 shadow-md shadow-gray-100 focus:ring-gray-500",
-        secondary: "bg-emerald-600 text-white hover:bg-emerald-700 shadow-md shadow-emerald-100 focus:ring-emerald-500",
-        outline: "border-2 border-gray-600 text-gray-600 hover:bg-gray-50 focus:ring-gray-500",
-        ghost: "text-gray-700 hover:bg-gray-100 focus:ring-gray-500"
+        primary: "bg-[#000128] text-white hover:bg-[#02143C] shadow-sm shadow-gray-200 focus:none transition-all ease-in-out duration-350",
+        secondary: "bg-accent-2 text-white hover:bg-[#02143C] shadow-sm focus:none transition-all ease-in-out duration-350",
+        outline: "border-1 border-gray-200 text-white hover:bg-[#02143C] focus:none transition-all ease-in-out duration-500",
+        ghost: "text-gray-200 transition-colors border-1 border-solid border-gray-200 hover:border-[#000128] transition-all ease-in-out duration-350 "
 
     }
     const sizes = {
