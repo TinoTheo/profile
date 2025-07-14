@@ -4,6 +4,7 @@ import "./fonts.css";
 import Navbar from "./components/sections/navbar";
 import ChatWidget from "./components/sections/chatwidget"; 'react'
 import Footer from './components/sections/Footer';
+import Image from "next/image"
 
 
 export const metadata: Metadata = {
@@ -14,9 +15,28 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
-      <body className="bg-[url('/solid-4.jpg')] bg-fixed bg-cover md:bg-fixed bg-center">
+      <body className="">
         <Navbar />
-          <main > {children}</main>
+          <main>
+
+          <div className="fixed inset-0 -z-10">
+        <Image
+          src="/solid-4.jpg"
+          alt="Background"
+          fill
+          priority
+          quality={75}
+          className="object-cover object-center"
+        />
+
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+
+            {children}
+
+          </main>
+
         <ChatWidget/>
         <Footer />
       </body>

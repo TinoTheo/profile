@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap');
 @import "tw-animate-css";
 
-
+html,
+body {
+  @apply min-h-screen m-0 p-0;
+}
 
 @theme {
   --color--primary: "#000128";

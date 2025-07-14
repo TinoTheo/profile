@@ -7,11 +7,35 @@ import { FaGithub, FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import FeaturedProjects from './components/sections/FeaturedProjects';
 import ContactSection from './components/sections/ContactSection';
 import Services from './components/sections/Services';
+import Image from 'next/image';
+import { useRef } from 'react';
+
+
 
 export default function HeroSection() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  
+
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth'});
+
+  };
+const scrollToProj = () => {
+  projectsRef.current?.scrollIntoView({ behavior: 'smooth'});
+}
   return (
     <>
-   <section className="relative min-h-screen flex items-center justify-center p-12 z-0 bg-[url('/office-01.jpg')] bg-fixed bg-cover md:bg-fixed bg-center">
+   <section className="relative min-h-screen flex items-center justify-center p-12 z-0">
+   <Image 
+   src="/office-01.jpg"
+   alt='office-bg'
+   fill
+   priority
+   quality={100}
+   className='object-cover object-center -z-10'>
+   </Image>
+   <div className='absolute inset-0 bg-black/40 -z-10'/>
    <div className='absolute min-h-screen inset-0 -z-100 '></div>
     <div className="flex items-center justify-center max-w-7xl mx-auto w-full p-12 z-100">
       <div className="text-center">
@@ -19,9 +43,7 @@ export default function HeroSection() {
         <h1 className="text-xl md:text-6xl font-bold text-white">That Work for You</h1>
         <h2 className='text-l md:text-3xl text-white max-w-4xl mx-auto'><span className='text-center'>From landing pages to full-stack platforms — I help businesses go digital with clean, fast, and user-friendly websites.</span></h2>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center text-center">
-          <Button variant="primary" size="md">Get a quote</Button>
-          <Button variant="outline" size="md">Get Expertise</Button>
-          <Button variant="ghost" size="md">Get in touch</Button>
+          <Button variant="ghost" size="md" onClick={scrollToSection}>Get in touch</Button>
         </div>
       </div>
     </div>
@@ -38,9 +60,8 @@ export default function HeroSection() {
               As a passionate freelancer, I transform complex problems into intuitive solutions.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="primary" size="md">View My Work</Button>
-              <Button variant="outline" size="md">Contact Me</Button>
-              <Button variant="ghost" size="md">Hire Me</Button>
+              <Button variant="primary" size="md" onClick={scrollToProj}>View My Work</Button>
+              <Button variant="ghost" size="md" onClick={scrollToSection}>Hire Me</Button>
             </div>
             {/* Social Icons */}
             <div className="mt-12 flex justify-center lg:justify-start">
@@ -97,8 +118,8 @@ export default function HeroSection() {
       </div>
     </section>
     <Services/>
-    <FeaturedProjects />
-    <ContactSection />
+    <FeaturedProjects ref={projectsRef} />
+    <ContactSection ref={sectionRef} />
  </>
     );
 }

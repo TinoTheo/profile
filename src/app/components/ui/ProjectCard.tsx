@@ -9,7 +9,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project, className = '' }: ProjectCardProps) {
   return (
-    <div className={`bg-[#00052b] border border-gray-500 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
+    <div className={`bg-[#000018] border border-gray-500 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
       <div className="relative h-56 overflow-hidden">
         <Image 
           src={project.imageUrl}

@@ -48,53 +48,5 @@ export type Project = {
       liveUrl: "https://tasks.example.com",
       featured: true
       
-    },
-    {
-      id: 2,
-      title: "Jambo Translator",
-      slug: "jambo-app",
-      description: "Jambo is a modern AI-powered web application designed to bridge language gaps by translating English text into Shona",
-      content: "Designed and developed a performant portfolio website with custom animations and responsive layouts. Implemented a headless CMS for content management and optimized for Core Web Vitals. The site features a dark/light mode toggle and uses GraphQL for data fetching.",
-      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/static/images/projects/jambo.png",
-      githubUrl: "https://github.com/theo/portfolio",
-      liveUrl: "https://portfolio.example.com",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Jambo Translator",
-      slug: "jambo-app",
-      description: "Jambo is a modern AI-powered web application designed to bridge language gaps by translating English text into Shona",
-      content: "Designed and developed a performant portfolio website with custom animations and responsive layouts. Implemented a headless CMS for content management and optimized for Core Web Vitals. The site features a dark/light mode toggle and uses GraphQL for data fetching.",
-      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/static/images/projects/jambo.png",
-      githubUrl: "https://github.com/theo/portfolio",
-      liveUrl: "https://portfolio.example.com",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Jambo Translator",
-      slug: "jambo-app",
-      description: "Jambo is a modern AI-powered web application designed to bridge language gaps by translating English text into Shona",
-      content: "Designed and developed a performant portfolio website with custom animations and responsive layouts. Implemented a headless CMS for content management and optimized for Core Web Vitals. The site features a dark/light mode toggle and uses GraphQL for data fetching.",
-      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/static/images/projects/jambo.png",
-      githubUrl: "https://github.com/theo/portfolio",
-      liveUrl: "https://portfolio.example.com",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Jambo Translator",
-      slug: "jambo-app",
-      description: "Jambo is a modern AI-powered web application designed to bridge language gaps by translating English text into Shona",
-      content: "Designed and developed a performant portfolio website with custom animations and responsive layouts. Implemented a headless CMS for content management and optimized for Core Web Vitals. The site features a dark/light mode toggle and uses GraphQL for data fetching.",
-      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/static/images/projects/jambo.png",
-      githubUrl: "https://github.com/theo/portfolio",
-      liveUrl: "https://portfolio.example.com",
-      featured: true
     }
   ];

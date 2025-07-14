@@ -13,7 +13,7 @@ export default function Footer() {
         {name: "Blogs", href:"https://blogs.com"}
     ]
   return (
-    <footer className="bg-[#000128] py-12  ">
+    <footer className="bg-[#000018] py-12  ">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl border-solid-1 border-white p-14">
         <div className="space-y-2 md:text-start text-center">
           <h2 className="text-2xl font-bold text-white mb-4">Get in touch</h2>

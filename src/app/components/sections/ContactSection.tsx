@@ -1,16 +1,16 @@
-import React from 'react';
-import { FaEnvelope, FaMarker, FaPhone } from 'react-icons/fa';
-import {useForm, ValidationError} from '@formspree/react';
+// ContactSection.tsx
+import React, { forwardRef } from 'react';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
+import { useForm, ValidationError } from '@formspree/react';
 import { FaCheck } from 'react-icons/fa6';
 
+const ContactSection = forwardRef<HTMLDivElement>((_, ref) => {
+  const [state, handleSubmit] = useForm('xldnowyn');
 
-export default function ContactSection() {
-  const [state,handleSubmit] = useForm('xldnowyn');
-  if (state.succeeded){
-    return       (
+  if (state.succeeded) {
+    return (
       <div className="flex justify-center items-center min-h-[60vh] py-16">
-      <div className="text-center bg-black/10 border border-white/10 rounded-3xl p-10 shadow-xl max-w-md w-full">
-        <div>
+        <div className="text-center bg-black/10 border border-white/10 rounded-3xl p-10 shadow-xl max-w-md w-full">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Thank you for your message!
           </h1>
@@ -20,13 +20,14 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-    </div>
-    )
+    );
   }
+
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 px-4 sm:px-6  text-white "
+      ref={ref}
+      className="py-16 md:py-24 px-4 sm:px-6 text-white"
     >
       <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-10 shadow-xl">
         <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
@@ -34,7 +35,7 @@ export default function ContactSection() {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Contact Info */}
+          {/* Contact Info */}
           <div>
             <p className="text-xl mb-8 text-gray-200">
               Have a project in mind? Let’s collaborate and bring your ideas to life.
@@ -63,7 +64,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Contact Form */}
           <div>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
@@ -77,7 +78,6 @@ export default function ContactSection() {
                   className="w-full px-4 py-3 bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-lg focus:ring-2 focus:ring-white focus:outline-none"
                   placeholder="Your Name"
                 />
-                
               </div>
 
               <div>
@@ -119,7 +119,8 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-
     </section>
   );
-}
+});
+
+export default ContactSection;
