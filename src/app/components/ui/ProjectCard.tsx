@@ -23,7 +23,7 @@ export default function ProjectCard({ project, className = '' }: ProjectCardProp
       
       <div className="p-6">
         <h3 className="text-xl font-extralight text-white mb-2">{project.title}</h3>
-        <p className="text-white mb-4 line-clamp-2">{project.description}</p>
+        <p className="text-white mb-4 line-clamp-2 font-thin ">{project.description}</p>
         
         <div className="flex flex-wrap gap-2 mb-6">
           {project.skills.slice(0, 3).map((skill, index) => (

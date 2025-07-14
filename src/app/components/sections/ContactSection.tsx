@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
 import { FaCheck } from 'react-icons/fa6';
 
-const ContactSection = forwardRef<HTMLDivElement>((_, ref) => {
+const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const [state, handleSubmit] = useForm('xldnowyn');
 
   if (state.succeeded) {
