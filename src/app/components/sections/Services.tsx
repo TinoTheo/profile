@@ -1,5 +1,6 @@
 import { constants } from "buffer";
 import React from "react";
+import Image from "next/image";
 
 
 export default function Services() {
@@ -24,12 +25,15 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {/* Image Section */}
-                    <div className="w-full h-full">
-                        <img
-                            src="/smart-hand.jpg"
-                            alt="Services"
-                            className="w-full h-auto object-cover rounded-3xl hover:scale-105 transition-transform duration-300"
-                        />
+                    <div className=" relative w-full h-full">
+                        <Image
+                        src="/smart-hand.jpg"
+                        alt="Services"
+                        fill
+                        priority
+                        className="w-fit h-auto object-cover rounded-3xl hover:scale-105 transition-transform duration-300"
+                        >
+                        </Image>
                     </div>
 
                     {/* Services Cards */}

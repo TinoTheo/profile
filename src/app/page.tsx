@@ -35,7 +35,7 @@ const scrollToProj = () => {
    quality={100}
    className='object-cover object-center -z-10'>
    </Image>
-   <div className='absolute inset-0 bg-black/40 -z-10'/>
+   <div className='absolute inset-0 bg-black/50 -z-10'/>
    <div className='absolute min-h-screen inset-0 -z-100 '></div>
     <div className="flex items-center justify-center max-w-7xl mx-auto w-full p-12 z-100">
       <div className="text-center">

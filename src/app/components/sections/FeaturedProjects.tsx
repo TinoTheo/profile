@@ -1,3 +1,5 @@
+'use client';
+
 import ProjectCard from '@/app/components/ui/ProjectCard';
 import { getFeaturedProjects } from '@/utils/projects';
 import Button from '@/app/components/ui/button';
@@ -6,6 +8,8 @@ import { mergeRefs } from '@/utils/mergeRefs'; // if you create it
 
 
 const FeaturedProjects = forwardRef<HTMLDivElement, {}>((props, ref) => {
+  FeaturedProjects.displayName = 'FeaturedProjects';
+
   const allProjects = getFeaturedProjects(); // returns all projects
   const [showMore, setShowMore] = useState(false);
 
