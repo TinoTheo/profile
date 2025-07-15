@@ -43,19 +43,19 @@ export default function Navbar() {
 
         {/* Desktop links - hidden on mobile */}
         <div className="hidden md:flex">
-          <NavLink href="/services" text="Services" />
-          <NavLink href="/portfolio" text="Portfolio" />
-          <NavLink href="/contact" text="Contact" />
-          <NavLink href="/resume" text="Resume" />
+          <NavLink href="#services" text="Services" />
+          <NavLink href="#portfolio" text="Portfolio" />
+          <NavLink href="#contact" text="Contact" />
+          <NavLink href="#resume" text="Resume" />
         </div>
 
         {/* Mobile menu - shown when open */}
         {isOpen && (
           <div className="flex flex-col md:hidden">
-            <MobileNavLink href="/services" text="Services" onClick={closeMenu} />
-            <MobileNavLink href="/portfolio" text="Portfolio" onClick={closeMenu} />
-            <MobileNavLink href="/contact" text="Contact" onClick={closeMenu} />
-            <MobileNavLink href="/resume" text="Resume" onClick={closeMenu} />
+            <MobileNavLink href="#services" text="Services" onClick={closeMenu} />
+            <MobileNavLink href="#portfolio" text="Portfolio" onClick={closeMenu} />
+            <MobileNavLink href="#contact" text="Contact" onClick={closeMenu} />
+            <MobileNavLink href="#resume" text="Resume" onClick={closeMenu} />
           </div>
         )}
       </div>

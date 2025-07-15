@@ -10,7 +10,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   if (state.succeeded) {
     return (
-      <div className="flex justify-center items-center min-h-[60vh] py-16">
+      <div className="flex justify-center items-center min-h-[60vh] py-16" id='contact'>
         <div className="text-center bg-black/10 border border-white/10 rounded-3xl p-10 shadow-xl max-w-md w-full">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Thank you for your message!

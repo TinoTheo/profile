@@ -14,7 +14,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="relative mx-auto backdrop-blur-lg p-6 md:p-10 min-h-screen">
+        <section className="relative mx-auto backdrop-blur-lg p-6 md:p-10 min-h-screen" id="services">
             <div className="max-w-7xl mx-auto w-full">
                 <div className="text-center mb-12 md:mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Services</h2>

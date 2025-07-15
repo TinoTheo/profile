@@ -26,7 +26,7 @@ const FeaturedProjects = forwardRef<HTMLDivElement, {}>((props, ref) => {
   };
 
   return (
-    <section className="mx-auto min-h-screen" ref={mergeRefs(ref, topRef)}>
+    <section className="mx-auto min-h-screen" ref={mergeRefs(ref, topRef)} id='projects'>
       <div className="z-10 max-w-7xl mx-auto py-16 md:p-12 px-4 sm:px-6 bg-none rounded-3xl backdrop-blur-lg border-solid-2 border-[0.5px] border-white/10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

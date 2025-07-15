@@ -48,7 +48,7 @@ const scrollToProj = () => {
       </div>
     </div>
    </section>
-  <section className="relative min-h-screen flex items-center justify-center">
+  <section className="relative min-h-screen flex items-center justify-center" id='portfolio'>
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center backdrop-blur-lg p-8 md:p-12">
           <div className="order-2 lg:order-1 text-center lg:text-left">
